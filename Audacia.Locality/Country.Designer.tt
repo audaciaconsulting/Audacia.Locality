@@ -1,0 +1,54 @@
+﻿<#@ template debug="true" hostspecific="true" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Linq" #>
+<#@ assembly name="System.Runtime" #>
+<#@ assembly name="System.Threading.Tasks" #>
+<#@ assembly name="$(TargetPath)" #>
+<#@ assembly name="$(SolutionDir)Audacia.Locality.Web\bin\Debug\netstandard1.2\Audacia.Locality.Web.dll" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Audacia.Locality" #>
+<#@ import namespace="Audacia.Locality.Web" #>
+<# var geonames = new GeoNamesClient(); #>
+<# var countries = Task.Run(async () => await geonames.Countries()).Result; #>
+<# var continents = countries.GroupBy(c => c.ContinentCode); #>
+namespace Audacia.Locality
+{
+	public partial class Country
+	{ <# foreach (var country in countries.OrderBy(c => c.Name)) {  #>
+
+		public static Country <#= new string(Titlize(country.Name).Where(char.IsLetter).ToArray()) #> { get; } = new Country
+		{
+			Code = "<#= country.Code #>",
+			Name = "<#= country.Name #>",
+			IsoNumeric = <#= country.IsoNumeric #>,
+			IsoAlpha3 = "<#= country.IsoAlpha3 #>",
+			FipsCode = "<#= country.FipsCode #>",
+			Continent = Continent.<#= Titlize(country.ContinentName).Replace(" ", string.Empty) #>,
+			ContinentCode = "<#= country.ContinentCode #>",
+			ContinentName = "<#= country.ContinentName #>",
+			Capital = "<#= country.Capital #>",
+			AreaSqKm = <#= country.AreaSqKm #>,
+			Population = <#= country.Population #>,
+			CurrencyCode = "<#= country.CurrencyCode #>",
+			Languages = { <#= string.Join(", ", country.Languages.Select(l => $"\"{l}\"")) #> },
+			North = <#= country.North #>,
+			East = <#= country.East #>,
+			West = <#= country.West #>,
+			South = <#= country.South #>
+		};
+<# } #>
+	}
+}
+
+<#+ string Titlize(string source)
+{
+	var lower = source.ToLower();
+	var words = lower.Split(' ')
+		.Select(w => w.Substring(0, 1).ToUpper() + w.Substring(1, w.Length - 1));
+	
+	return string.Join(" ", words);
+}
+#>
