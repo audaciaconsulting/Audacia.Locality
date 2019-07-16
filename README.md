@@ -2,6 +2,8 @@
 
 ### A type-safe C# library for working with geographical country data, provided by the [Geonames](http://www/geonames.org) API.
 
+![Build Status](https://dev.azure.com/audacia/Audacia/_apis/build/status/Audacia.Locality?branchName=master)
+
 # Usage
 
 Continents can be accessed as a static collection on the `World` class, and similarly, so can all the countries of the world. continents and countries can also be accessed using enum-like static members on their respective classes.
