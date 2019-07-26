@@ -11,3 +11,5 @@ resources:
       
 steps:
 - template: build-signed-package.netcore.yaml@templates
+  parameters:
+    packagePath: Audacia.Locality/Audacia.Locality.csproj
