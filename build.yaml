@@ -11,12 +11,12 @@ resources:
       
 stages:
 
-  - stage: Build
-    displayName: Build
-    jobs:
-      - template: jobs/build/netcore/signed-package.yaml@templates
+- stage: Build
+  displayName: Build
+  jobs:
+    - template: jobs/build/netcore/signed-package.yaml@templates
 
-  - stage: Release
-    displayName: Release
-    jobs:
-      - template: jobs/release/netcore/public-package.yaml@templates
+- stage: Release
+  displayName: Release
+  jobs:
+    - template: jobs/release/netcore/public-package.yaml@templates
