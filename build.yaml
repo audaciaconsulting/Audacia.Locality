@@ -10,6 +10,6 @@ resources:
       name: Audacia/Audacia.Build.Templates
       
 steps:
-- template: build-signed-package.netcore.yaml@templates
+- template: jobs/build/netcore/signed-package.yaml@templates
   parameters:
     packagePath: Audacia.Locality/Audacia.Locality.csproj
