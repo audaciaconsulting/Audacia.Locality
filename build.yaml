@@ -9,7 +9,14 @@ resources:
       type: git
       name: Audacia/Audacia.Build.Templates
       
-jobs:
-- template: jobs/build/netcore/signed-package.yaml@templates
-  parameters:
-    packagePath: Audacia.Locality/Audacia.Locality.csproj
+stages:
+
+- stage: Build
+  displayName: Build
+  jobs:
+    - template: jobs/build/netcore/signed-package.yaml@templates
+
+- stage: Release
+  displayName: Release
+  jobs:
+    - template: jobs/release/netcore/public-package.yaml@templates
