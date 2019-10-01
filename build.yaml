@@ -8,11 +8,11 @@ stages:
   - stage: Build
     displayName: Build
     jobs:
-    - template: pipelines/build/nuget-package.job.yaml@templates
+    - template: pipelines/build/signed-nuget-package.job.yaml@templates
       parameters:
         projects: Audacia.Locality/Audacia.Locality.csproj
 
   - stage: Release
     displayName: Release
     jobs: 
-    - template: pipelines/release/internal-nuget-package.job.yaml@templates
+    - template: pipelines/release/public-nuget-package.job.yaml@templates
