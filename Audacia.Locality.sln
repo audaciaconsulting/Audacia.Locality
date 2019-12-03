@@ -9,6 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Audacia.Locality.Tests", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Audacia.Locality.Web", "Audacia.Locality.Web\Audacia.Locality.Web.csproj", "{C5F42F18-1DF7-439A-BED9-092E591D407E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{12F3D1A7-0BDD-454B-A46A-3FB1DCDAB7CB}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+	LICENSE.md = LICENSE.md
+	CONTRIBUTING.md = CONTRIBUTING.md
+	build.yaml = build.yaml
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

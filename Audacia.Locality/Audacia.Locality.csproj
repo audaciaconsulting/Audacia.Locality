@@ -7,6 +7,10 @@
     <Copyright>Copyright © Audacia 2017</Copyright>
     <PackageIconUrl>https://www.audacia.co.uk/media/pkenoobu/audacia-logo-circle-blue.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/audaciaconsulting/Audacia.Locality</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>audacia.public.snk</AssemblyOriginatorKeyFile>
+    <PublicSign>false</PublicSign>
+    <DelaySign>true</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Flags\Large\ad.png" />
