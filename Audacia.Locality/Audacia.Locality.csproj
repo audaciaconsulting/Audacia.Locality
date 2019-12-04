@@ -8,7 +8,7 @@
     <PackageIconUrl>https://www.audacia.co.uk/media/pkenoobu/audacia-logo-circle-blue.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/audaciaconsulting/Audacia.Locality</RepositoryUrl>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>audacia.public.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\audacia.public.snk</AssemblyOriginatorKeyFile>
     <PublicSign>false</PublicSign>
     <DelaySign>true</DelaySign>
   </PropertyGroup>
@@ -775,6 +775,9 @@
     <None Remove="Flags\Small\za.png" />
     <None Remove="Flags\Small\zm.png" />
     <None Remove="Flags\Small\zw.png" />
+    <None Include="..\audacia.public.snk">
+      <Link>audacia.public.snk</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Flags\Large\ad.png" />
