@@ -4,6 +4,7 @@
 
 [![Build Status](https://dev.azure.com/audacia/Audacia/_apis/build/status/Audacia.Locality?branchName=master)](https://dev.azure.com/audacia/Audacia/_build/latest?definitionId=273&branchName=master)
 [![NuGet](https://img.shields.io/nuget/v/Audacia.Locality.svg)](https://www.nuget.org/packages/Audacia.Locality)
+[![CodeFactor](https://www.codefactor.io/repository/github/audaciaconsulting/audacia.locality/badge)](https://www.codefactor.io/repository/github/audaciaconsulting/audacia.locality)
 
 # Usage
 
