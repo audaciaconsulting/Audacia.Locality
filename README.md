@@ -28,6 +28,10 @@ Continent.Europe.Countries.Where(c => c.AreaSqKm > Country.Sweden.AreaSqKm)
 
 The `Country` class contains various metadata about the country such as its location, size, population, and its official flag (provided as a byte array).
 
+# Change History
+
+The `Audacia.Locality` repository change history can be found in this [changelog](./CHANGELOG.md):
+
 # Development
 
 The library uses two `t4` template files to generate all its data, using the Geonames API. In order to successfully build the solution, a valid Geonames username must be provided in the `Credentials` class in `Audacia.Locality.Web`.
