@@ -5,12 +5,6 @@ pr:
   branches:
     include:
       - master
-schedules:
-  - cron: "0 0 * * *"
-    displayName: Nightly Build
-    branches:
-      include:
-        - master
 resources:
   repositories:
     - repository: templates
