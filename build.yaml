@@ -21,7 +21,7 @@ stages:
   - template: src/build/dotnet/jobs/signed-nuget-package.job.yaml@templates
     parameters:
       projects: Audacia.Locality/Audacia.Locality.csproj
-      excludePaths: '*.Tests.csproj,*.Audacia.Locality.Web.csproj'
+      excludePaths: '*.Tests.csproj,Audacia.Locality.Web.csproj'
 
 - stage: Stage_Release
   displayName: Release
